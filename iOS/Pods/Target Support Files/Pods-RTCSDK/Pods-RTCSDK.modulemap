@@ -1,0 +1,6 @@
+framework module Pods_RTCSDK {
+  umbrella header "Pods-RTCSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

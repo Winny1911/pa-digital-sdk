@@ -1,0 +1,22 @@
+use_frameworks!
+workspace 'RTCSDK'
+
+target 'RTCSDK' do
+    platform :ios, '10.0'
+    
+    pod 'RestEssentials', '~> 5.1.0'
+    pod 'Socket.IO-Client-Swift', '16.0.0-beta2'
+    pod 'GoogleWebRTC', '~> 1.1'
+    
+    project 'RTCSDK/RTCSDK'
+end
+
+target 'Sample' do
+    platform :ios, '10.0'
+    
+    pod 'RestEssentials', '~> 5.1.0'
+    pod 'Socket.IO-Client-Swift', '16.0.0-beta2'
+    pod 'GoogleWebRTC', '~> 1.1'
+    
+    project 'Sample/Sample'
+end

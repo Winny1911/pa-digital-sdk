@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallViewController" customModule="RTCSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="localVideoView" destination="sJx-2H-kxu" id="WaW-4y-2AR"/>
+                <outlet property="remoteVideoView" destination="rKP-rB-b6N" id="JMv-i7-0IA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jew-H4-HkJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKP-rB-b6N">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desligar.png" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-3K-CbI">
+                            <rect key="frame" x="174.5" y="771" width="65" height="65"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="Xak-Fl-rCn"/>
+                                <constraint firstAttribute="width" constant="65" id="jxw-5R-iSD"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="UZD-80-oRI" appends="YES" id="woh-Lh-kui"/>
+                            </connections>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-RT-1WJ">
+                            <rect key="frame" x="92.5" y="778" width="52" height="52"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="Hw8-qJ-oDI"/>
+                                <constraint firstAttribute="height" constant="52" id="pZ3-1B-M6u"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="S06-m5-2R6" appends="YES" id="4Lp-rh-lgw"/>
+                            </connections>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microfone.png" translatesAutoresizingMaskIntoConstraints="NO" id="MzV-6j-4ON">
+                            <rect key="frame" x="269.5" y="778" width="52" height="52"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="ON3-oP-SHn"/>
+                                <constraint firstAttribute="width" constant="52" id="bcL-hc-TGT"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="i1A-yf-NcA" appends="YES" id="CyR-Ok-XtW"/>
+                            </connections>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MzV-6j-4ON" secondAttribute="bottom" constant="66" id="EAN-DA-csI"/>
+                        <constraint firstItem="nsJ-3K-CbI" firstAttribute="leading" secondItem="aYN-RT-1WJ" secondAttribute="trailing" constant="30" id="ONZ-Wa-MSE"/>
+                        <constraint firstItem="nsJ-3K-CbI" firstAttribute="centerX" secondItem="rKP-rB-b6N" secondAttribute="centerX" id="R5U-on-I7e"/>
+                        <constraint firstItem="MzV-6j-4ON" firstAttribute="leading" secondItem="nsJ-3K-CbI" secondAttribute="trailing" constant="30" id="T56-QR-4BY"/>
+                        <constraint firstAttribute="bottom" secondItem="nsJ-3K-CbI" secondAttribute="bottom" constant="60" id="XDO-S9-nSh"/>
+                        <constraint firstAttribute="bottom" secondItem="aYN-RT-1WJ" secondAttribute="bottom" constant="66" id="mEG-Wp-6dk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJx-2H-kxu">
+                    <rect key="frame" x="267" y="622" width="110" height="110"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="TNl-9y-kXb"/>
+                        <constraint firstAttribute="height" constant="110" id="XOP-2q-jzg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rKP-rB-b6N" secondAttribute="bottom" id="44G-QJ-6KT"/>
+                <constraint firstItem="rKP-rB-b6N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CsA-N7-QK8"/>
+                <constraint firstAttribute="trailing" secondItem="rKP-rB-b6N" secondAttribute="trailing" id="W63-zg-gTY"/>
+                <constraint firstAttribute="trailing" secondItem="sJx-2H-kxu" secondAttribute="trailing" constant="37" id="YO8-1e-Ohm"/>
+                <constraint firstItem="rKP-rB-b6N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a6a-Mi-fXI"/>
+                <constraint firstAttribute="bottom" secondItem="sJx-2H-kxu" secondAttribute="bottom" constant="164" id="sju-Fh-gCp"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="116"/>
+        </view>
+        <tapGestureRecognizer id="UZD-80-oRI">
+            <connections>
+                <action selector="stopCallTap:" destination="-1" id="Pm2-vE-CId"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="i1A-yf-NcA">
+            <connections>
+                <action selector="micTap:" destination="-1" id="SIR-dO-vzl"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="S06-m5-2R6">
+            <connections>
+                <action selector="videoTap:" destination="-1" id="t5i-P6-5vq"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="desligar.png" width="66" height="66"/>
+        <image name="microfone.png" width="52.5" height="52"/>
+        <image name="video.png" width="52" height="52"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
